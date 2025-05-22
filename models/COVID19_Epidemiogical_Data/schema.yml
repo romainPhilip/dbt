@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: public
+    database: DEMO
+    schema: PUBLIC
+    tables:
+      - name: data
+  - name: COVID19_Epidemiological_Data   # Nom logique que tu utilises dans `source()`
+    schema: PUBLIC                        # Nom du schéma Snowflake
+    database: DEMO                        # Nom de la base si nécessaire
+    tables:
+      - name: DEMOGRAPHICS   
+
+models:
+  - name: country_codes
+    description: "Vue contenant les codes pays distincts"
